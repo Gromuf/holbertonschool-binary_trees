@@ -51,5 +51,6 @@ int is_perfect_rec(const binary_tree_t *tree, int depth, int level)
 	if (tree->left == NULL || tree->right == NULL)
 		return (0);
 
-	return (is_perfect_rec(tree->left, depth, level + 1) && is_perfect_rec(tree->right, depth, level + 1));
+	return (is_perfect_rec(tree->left, depth, level + 1) &&
+			is_perfect_rec(tree->right, depth, level + 1));
 }
